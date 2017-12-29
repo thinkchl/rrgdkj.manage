@@ -10,7 +10,7 @@
 		jdbc:mysql://127.0.0.1:3306/rrgdkj?useUnicode=true&amp;characterEncoding=UTF-8
 	</property>
 	<property name="connection.username">root</property>
-	<property name="connection.password">newpass</property>
+	<property name="connection.password"></property>
 	<!-- 方言 -->
 	<property name="dialect">
 		org.hibernate.dialect.MySQLDialect
