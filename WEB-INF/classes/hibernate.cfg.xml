@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+	<!-- JDBC连接信息     mysql-->
+	<property name="connection.driver_class">
+		com.mysql.jdbc.Driver
+	</property>
+	<property name="connection.url">
+		jdbc:mysql://127.0.0.1:3306/rrgdkj?useUnicode=true&amp;characterEncoding=UTF-8
+	</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">newpass</property>
+	<!-- 方言 -->
+	<property name="dialect">
+		org.hibernate.dialect.MySQLDialect
+	</property>
+
+	<!-- JDBC连接信息     oracle-->
+	<!-- 
+		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="connection.url">jdbc:oracle:thin:@127.0.0.1:1521:orcl</property>
+		<property name="connection.username">hwz</property>
+		<property name="connection.password">hwz</property>
+		<property name="dialect">org.hibernate.dialect.OracleDialect</property> 
+	-->
+
+	<!-- 可选配置 -->
+	<property name="show_sql">true</property>
+	<property name="format_sql">true</property>
+	<!-- <property name="hbm2ddl.auto">update</property> -->
+
+	<!-- 二级缓存 -->
+	<!-- <property name="cache.use_second_level_cache">true</property> -->
+	<!-- 	<property name="cache.region.factory_class">
+		org.hibernate.cache.ehcache.EhCacheRegionFactory
+		</property> -->
+
+	<!-- 映射文件配置 -->
+
+	<!-- <class-cache usage="read-write" class="hibernate.helloworld.entity.User"/> -->
+	<mapping class="com.rrgdkj.manage.entity.User" />
+	<mapping class="com.rrgdkj.manage.entity.Role" />
+	<mapping class="com.rrgdkj.manage.entity.UserRole" />
+	<mapping class="com.rrgdkj.manage.entity.Privilege" />
+	<mapping class="com.rrgdkj.manage.entity.RolePrivilege" />
+	<mapping class="com.rrgdkj.manage.entity.ComponentsCompany" />
+	<mapping class="com.rrgdkj.manage.entity.Funder" />
+	<mapping class="com.rrgdkj.manage.entity.News" />
+	<mapping class="com.rrgdkj.manage.entity.SucceedCasus" />
+	<mapping class="com.rrgdkj.manage.entity.WorkUnit" />
+
+</session-factory>
+</hibernate-configuration>

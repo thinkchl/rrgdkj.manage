@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<action path="/showLogin" forward="/WEB-INF/page/admin/login.jsp"></action>
+		<action path="/login" type="com.rrgdkj.manage.controller.Action" parameter="login">
+			<forward name="success" path="/index.do" redirect="true"></forward>
+			<forward name="fail" path="/showLogin.do" redirect="true"></forward>
+		</action>
+		<action path="/quit" type="com.rrgdkj.manage.controller.Action" parameter="quit"></action>
+		<action path="/index" forward="/WEB-INF/page/admin/index.jsp"></action>
+		<action path="/showList" forward="/WEB-INF/page/admin/list.jsp"></action>
+		<action path="/list" type="com.rrgdkj.manage.controller.Action" parameter="getList"></action>
+		<action path="/showAdd" type="com.rrgdkj.manage.controller.Action" parameter="showAdd"></action>
+		<action path="/pagination" type="com.rrgdkj.manage.controller.Action" parameter="getPageInfo"></action>
+		<action path="/add" type="com.rrgdkj.manage.controller.Action" parameter="add">
+			<forward name="success" path="/WEB-INF/page/admin/list.htm" redirect="true"></forward>
+		</action>
+		<action path="/disable" type="com.rrgdkj.manage.controller.Action" parameter="setDisable"></action>
+	</action-mappings>
+	<message-resources parameter="com.rrgdkj.struts.ApplicationResources" />
+</struts-config>
+

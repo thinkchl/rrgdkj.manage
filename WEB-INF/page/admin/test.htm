@@ -1,0 +1,54 @@
+<table class="table table-hover text-center">
+      <thead>
+        <tr>
+          <th style="text-align:left; padding-left:20px;">ID</th>
+          <th>公司名</th>
+          <th>公司logo</th>
+          <th>公司地址</th>
+          <th>公司邮箱</th>
+          <th>公司电话</th>
+          <th>禁</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="8">
+              <div class="pagelist">
+                    <a href="#" class='prevpage'>上一页</a>
+
+                    <a href="#" class='nextpage'>下一页</a>
+                    <a href="#" class='end'>尾页</a>
+              </div>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+<script type="text/html" id="list">
+      {{each items item}}
+        <tr>
+        <td style="text-align:left; padding-left:20px;">
+            <!-- <input type="checkbox" name="id[]" value="" /> -->
+          {{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td><img src="../../api/upload/{{item.logo}}" alt="" width="70" height="50" /></td>
+         <td>{{item.addr}}</td>
+         <td>{{item.email}}</td>
+         <td>{{item.phone}}</td>
+         <td>{{item.disabled=='false'?'否':'是'}}</td>
+         <td>
+             <div class="button-group">
+                {{if item.disabled=='true'}}
+                  <a class="button border-main update" href="javascript:void(0)" onclick="return changeStatus({{item.id}})">
+                      <span class="icon-edit"></span> 发布信息</a>
+                {{else}}
+                  <a class="button border-red del" href="javascript:void(0)" onclick="return changeStatus({{item.id}})">
+                       <span class="icon-trash-o"></span> 禁止发布</a>
+                {{/if}}
+             </div>
+       </tr>
+      {{/each}}
+</script>

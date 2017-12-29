@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/showLogin.do" location="50,50" dimension="100,62" />
+  <StrutsActivity path="/login.do" location="350,150" dimension="225,88" />
+  <StrutsActivity path="/quit.do" location="650,850" dimension="225,88" />
+  <StrutsActivity path="/index.do" location="1250,650" dimension="72,62" />
+  <StrutsActivity path="/showList.do" location="950,850" dimension="91,62" />
+  <StrutsActivity path="/list.do" location="50,450" dimension="225,88" />
+  <StrutsActivity path="/showAdd.do" location="1250,150" dimension="225,88" />
+  <StrutsActivity path="/pagination.do" location="350,450" dimension="225,88" />
+  <StrutsActivity path="/add.do" location="650,450" dimension="225,88" />
+  <StrutsActivity path="/disable.do" location="950,450" dimension="225,88" />
+  <StrutsActivity path="/WEB-INF/page/admin/login.jsp" location="1250,450" dimension="194,49" />
+  <StrutsActivity path="/WEB-INF/page/admin/index.jsp" location="350,850" dimension="197,49" />
+  <StrutsActivity path="/WEB-INF/page/admin/list.jsp" location="1250,850" dimension="185,49" />
+  <StrutsActivity path="/WEB-INF/page/admin/list.htm" location="50,850" dimension="190,49" />
+  <StrutsActivity path="/WEB-INF/page/admin/template/login.htm" location="950,650" dimension="249,49" />
+  <StrutsActivity path="/WEB-INF/page/admin/template/register.htm" location="50,750" dimension="264,49" />
+  <StrutsActivity path="/WEB-INF/page/admin/template/list.htm" location="650,650" dimension="240,49" />
+  <StrutsActivity path="../admin/template/list.htm" location="50,650" dimension="165,49" />
+  <StrutsActivity path="../admin/template/login.htm" location="950,350" dimension="174,49" />
+  <StrutsActivity path="../admin/template/register.htm" location="650,150" dimension="189,49" />
+  <StrutsActivity path="" location="350,50" dimension="29,49" />
+  <StrutsActivity path="/WEB-INF/page/login.htm" location="950,50" dimension="163,49" />
+  <StrutsActivity path="/page/MyHtml.html" location="950,150" dimension="131,49" />
+  <StrutsActivity path="page/MyHtml.html" location="50,250" dimension="127,49" />
+  <StrutsActivity path="/admin/template/register.htm" location="650,250" dimension="183,49" />
+  <StrutsActivity path="/../admin/template/register.htm" location="950,250" dimension="193,49" />
+  <StrutsActivity path="http://localhost:8080/admin/template/register.htm" location="50,350" dimension="294,49" />
+  <StrutsActivity path="/login" location="650,350" dimension="58,49" />
+  <StrutsActivity path="/../admin/template/list.htm" location="350,650" dimension="169,49" />
+  <StrutsActivity path="/WEB-INF/page/admin/login.htm" location="650,750" dimension="199,49" />
+  <StrutsActivity path="/WEB-INF/page/admin/register.htm" location="950,750" dimension="214,49" />
+  <StrutsActivity path="/WEB-INF/page/admin/index.htm" location="1250,550" dimension="202,49" />
+  <StrutsTransition id="/login.do,success,/index.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="575,214" />
+      <AbsolutePoint location="1214,214" />
+      <AbsolutePoint location="1214,681" />
+      <AbsolutePoint location="1250,681" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,null,/WEB-INF/page/admin/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1286,712" />
+      <AbsolutePoint location="1286,814" />
+      <AbsolutePoint location="448,814" />
+      <AbsolutePoint location="448,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,fail,/showLogin.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,194" />
+      <AbsolutePoint location="100,194" />
+      <AbsolutePoint location="100,112" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showLogin.do,null,/WEB-INF/page/admin/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="100,50" />
+      <AbsolutePoint location="100,-25" />
+      <AbsolutePoint location="1347,-25" />
+      <AbsolutePoint location="1347,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/add.do,success,/WEB-INF/page/admin/list.htm,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,524" />
+      <AbsolutePoint location="620,524" />
+      <AbsolutePoint location="620,914" />
+      <AbsolutePoint location="145,914" />
+      <AbsolutePoint location="145,899" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showList.do,null,/WEB-INF/page/admin/list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1041,874" />
+      <AbsolutePoint location="1250,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+
